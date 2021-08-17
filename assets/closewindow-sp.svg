@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="211.236" height="234.691" viewBox="0 0 211.236 234.691">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="長方形_304" data-name="長方形 304" d="M90.58,0h97.381a11.323,11.323,0,0,1,11.323,11.323V169.838a11.323,11.323,0,0,1-11.323,11.323H90.58A90.58,90.58,0,0,1,0,90.58v0A90.58,90.58,0,0,1,90.58,0Z" transform="translate(181.161 0) rotate(90)" fill="#fff" stroke="#baa272" stroke-width="8.504"/>
+    </clipPath>
+  </defs>
+  <g id="グループ_625" data-name="グループ 625" transform="translate(-68.948 -401.559)">
+    <g id="グループ_555" data-name="グループ 555" transform="translate(81.315 413.898)">
+      <g id="長方形_352" data-name="長方形 352" transform="translate(187.869 0) rotate(90)" fill="none" stroke="#73644d" stroke-miterlimit="10" stroke-width="11">
+        <path d="M93.935,0H211.353a0,0,0,0,1,0,0V187.869a0,0,0,0,1,0,0H93.935A93.935,93.935,0,0,1,0,93.935v0A93.935,93.935,0,0,1,93.935,0Z" stroke="none"/>
+        <path d="M93.935-5.5H212.252a4.6,4.6,0,0,1,4.6,4.6V188.769a4.6,4.6,0,0,1-4.6,4.6H93.935A99.435,99.435,0,0,1-5.5,93.935v0A99.435,99.435,0,0,1,93.935-5.5Z" fill="none"/>
+      </g>
+      <path id="合体_1" data-name="合体 1" d="M418.49,402.984V334.077H326.681v-3H418.49v-67.7H326.681v-3h90.172l-56.144-49.425,1.983-2.252,55.8,49.121V191.632h4.251v66.189l55.8-49.121,1.983,2.252-56.145,49.425H514.55v3H422.741v67.7H514.55v3H422.741v68.907Z" transform="translate(-325.696 -191.474)" fill="rgba(115,100,77,0.3)"/>
+    </g>
+  </g>
+</svg>

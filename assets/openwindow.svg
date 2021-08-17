@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="407.68" height="199.31" viewBox="-100 0 347.68 199.31">
+  <g id="グループ_599" data-name="グループ 599" transform="translate(-317.115 -197.653)">
+    <path id="パス_1261" data-name="パス 1261" d="M499.749,287.453v98.51H342.14v-98.51a78.8,78.8,0,0,1,78.8-78.8h.009a78.8,78.8,0,0,1,78.8,78.8Z" fill="none" stroke="#73644d" stroke-width="1"/>
+    <path id="パス_1262" data-name="パス 1262" d="M420.436,391.463h-79.9a3.9,3.9,0,0,1-3.9-3.9V287.453a84.3,84.3,0,0,1,84.3-84.3" fill="none" stroke="#73644d" stroke-miterlimit="10" stroke-width="11"/>
+    <line id="線_53" data-name="線 53" x2="78.805" transform="translate(250.864 267.584)" fill="none" stroke="#73644d" stroke-width="3"/>
+    <line id="線_54" data-name="線 54" x2="81.639" transform="translate(250.864 326.897)" fill="none" stroke="#73644d" stroke-width="3"/>
+    <line id="線_56" data-name="線 56" y1="43.511" x2="49.426" transform="translate(250.864 223.917)" fill="none" stroke="#73644d" stroke-width="3"/>
+    <line id="線_53-2" data-name="線 53" x2="78.805" transform="translate(512.241 267.584)" fill="none" stroke="#73644d" stroke-width="3"/>
+    <line id="線_54-2" data-name="線 54" x2="81.639" transform="translate(509.407 326.897)" fill="none" stroke="#73644d" stroke-width="3"/>
+    <line id="線_56-2" data-name="線 56" x2="49.426" y2="43.511" transform="translate(541.62 223.917)" fill="none" stroke="#73644d" stroke-width="3"/>
+    <path id="パス_1265" data-name="パス 1265" d="M420.94,203.153h.009a84.3,84.3,0,0,1,84.3,84.3v100.11a3.9,3.9,0,0,1-3.9,3.9H420.436" fill="none" stroke="#73644d" stroke-miterlimit="10" stroke-width="11"/>
+    <path id="パス_1263" data-name="パス 1263" d="M250.865,385.552V205.978l0-2.825a84.3,84.3,0,0,1,84.3,84.3v100.11a3.9,3.9,0,0,1-3.9,3.9h-80.4Z" fill="rgba(204,200,196,0.4)" stroke="#73644d" stroke-miterlimit="10" stroke-width="7.5"/>
+    <path id="パス_1264" data-name="パス 1264" d="M591.045,391.463h-80.4a3.9,3.9,0,0,1-3.9-3.9V287.453a84.3,84.3,0,0,1,84.3-84.3l0,2.825V391.463Z" fill="rgba(204,200,196,0.4)" stroke="#73644d" stroke-miterlimit="10" stroke-width="7.5"/>
+  </g>
+</svg>

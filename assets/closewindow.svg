@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200.609" height="199.31" viewBox="0 0 200.609 199.31">
+  <g id="グループ_618" data-name="グループ 618" transform="translate(-82.375 -201.422)">
+    <line id="線_53" data-name="線 53" x2="157.609" transform="translate(92.475 271.353)" fill="none" stroke="#73644d" stroke-width="3" opacity="0.3"/>
+    <line id="線_54" data-name="線 54" x2="157.609" transform="translate(92.475 330.666)" fill="none" stroke="#73644d" stroke-width="3" opacity="0.3"/>
+    <path id="パス_1344" data-name="パス 1344" d="M0,0V177.31" transform="translate(171.279 212.422)" fill="none" stroke="#73644d" stroke-width="6"/>
+    <line id="線_56" data-name="線 56" x2="49.426" y2="43.511" transform="translate(121.854 227.686)" fill="none" stroke="#73644d" stroke-width="3" opacity="0.3"/>
+    <line id="線_57" data-name="線 57" x1="49.426" y2="43.511" transform="translate(171.279 227.686)" fill="none" stroke="#73644d" stroke-width="3" opacity="0.3"/>
+    <g id="長方形_352" data-name="長方形 352" transform="translate(250.084 212.422) rotate(90)" fill="none" stroke="#73644d" stroke-miterlimit="10" stroke-width="11">
+      <path d="M78.8,0H177.31a0,0,0,0,1,0,0V157.609a0,0,0,0,1,0,0H78.8A78.8,78.8,0,0,1,0,78.8v0A78.8,78.8,0,0,1,78.8,0Z" stroke="none"/>
+      <path d="M78.8-5.5H178.91a3.9,3.9,0,0,1,3.9,3.9V159.209a3.9,3.9,0,0,1-3.9,3.9H78.8A84.3,84.3,0,0,1-5.5,78.8v0A84.3,84.3,0,0,1,78.8-5.5Z" fill="none"/>
+    </g>
+  </g>
+</svg>
