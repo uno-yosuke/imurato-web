@@ -54,7 +54,6 @@ export default {
   computed: {
     imgSrc() {
       return require("../assets/" + String(this.id) + "_" + this.imagename + "/" + this.imagename + "_正面.png")
-      // return require("../assets/12_高橋(幸)/高橋(幸)_正面.png")
     }
   },
   created() {
@@ -116,7 +115,7 @@ export default {
 }
 .job-area-text {
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   position: absolute;
   top: 0px;
   left: 50%;

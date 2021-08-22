@@ -1,5 +1,5 @@
 <template>
-  <div v-on:mouseover="mouseOverAction" v-on:mouseleave="mouseLeaveAction" class="member-card-layout px-2">
+  <div v-on:mouseover="mouseOverAction" v-on:mouseleave="mouseLeaveAction" class="member-card-layout">
     <nuxt-link :to="{ path: '/member/' + id }">
       <div :style="{ backgroundImage: 'url(' + imgSrc + ')' }" class="svg">
         <CloseWindowSP class="" width="100%" height="100%" />

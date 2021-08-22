@@ -1,8 +1,5 @@
 <template>
   <div id="wrapper">
-    <div class="leaf is-hidden-mobile">
-      <Leaf/>
-    </div>
     <!-- PC表示 -->
     <nav class="navbar header has-shadow is-hidden-mobile" role="navigation" aria-label="main navigation">
       <div class="navbar-brand-center">
@@ -22,20 +19,20 @@
         <Nuxt />
       </div>
     </section>
-    <Footer />
+    <FooterMember />
   </div>
 </template>
 
 <script>
 import ImuratoTop from '../assets/imurato_top.svg'
 import Leaf from '../assets/leaf.svg'
-import Footer from '~/components/Footer.vue'
+import FooterMember from '~/components/FooterMember.vue'
 
 export default {
   components: {
     ImuratoTop,
     Leaf,
-    Footer,
+    FooterMember,
   },
   data () {
     return {

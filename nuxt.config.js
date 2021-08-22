@@ -1,4 +1,7 @@
 export default {
+  router: {
+    base: "/cp/dm202109/"
+  },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -26,6 +29,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '@/plugins/animation.js',ssr: false},
+    { src: '@/plugins/vue-scrollmagic.js',ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -44,5 +49,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend (config, ctx) {
+      config.output.publicPath = '/works/imurato/_nuxt/'
+    }
   }
 }

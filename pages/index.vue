@@ -16,35 +16,58 @@
             <MemberHeader width="250" height="100" />
           </div>
         </div>
-        <div class="columns p-0">
+        <!-- PC表示 -->
+        <div class="columns p-0 is-mobile is-hidden-mobile">
           <div class="column is-12">
-            <button v-if="tokyobuttonflag" @click="getMember(1)" class="menu-button-focus button mx-5 my-2"><TokyoWhite /></button>
-            <button v-else @click="getMember(1)" class="menu-button button mx-5 my-2"><Tokyo /></button>
-            <button v-if="osakabuttonflag" @click="getMember(2)" class="menu-button-focus button mx-5 my-2"><OsakaWhite /></button>
-            <button v-else @click="getMember(2)" class="menu-button button mx-5 my-2"><Osaka /></button>
-            <button v-if="kitchenbuttonflag" @click="getMember(3)" class="menu-button-focus button mx-5 my-2"><KitchenWhite /></button>
-            <button v-else @click="getMember(3)" class="menu-button button mx-5 my-2"><Kitchen /></button>          
+            <button v-if="tokyobuttonflag" @click="getMember(1)" class="menu-button-focus-pc button mx-5"><TokyoWhite width="100%" /></button>
+            <button v-else @click="getMember(1)" class="menu-button-pc button mx-5"><Tokyo width="100%" /></button>
+            <button v-if="osakabuttonflag" @click="getMember(2)" class="menu-button-focus-pc button mx-5"><OsakaWhite width="100%" /></button>
+            <button v-else @click="getMember(2)" class="menu-button-pc button mx-5"><Osaka width="100%" /></button> 
+            <button v-if="kitchenbuttonflag" @click="getMember(3)" class="menu-button-focus-pc button mx-5"><KitchenWhite width="100%" /></button>
+            <button v-else @click="getMember(3)" class="menu-button-pc button mx-5"><Kitchen width="100%" /></button>                        
           </div>
+        </div>
+        <!-- SP表示 -->
+        <div class="columns p-0 is-mobile is-hidden-tablet">
+          <div class="column is-4">
+            <button v-if="tokyobuttonflag" @click="getMember(1)" class="menu-button-focus button"><TokyoWhite width="100%" /></button>
+            <button v-else @click="getMember(1)" class="menu-button button"><Tokyo width="100%" /></button>
+          </div>
+          <div class="column is-4">
+            <button v-if="osakabuttonflag" @click="getMember(2)" class="menu-button-focus button"><OsakaWhite width="100%" /></button>
+            <button v-else @click="getMember(2)" class="menu-button button"><Osaka width="100%" /></button>
+          </div>
+          <div class="column is-4">
+            <button v-if="kitchenbuttonflag" @click="getMember(3)" class="menu-button-focus button"><KitchenWhite width="100%" /></button>
+            <button v-else @click="getMember(3)" class="menu-button button"><Kitchen width="100%" /></button> 
+          </div> 
         </div>
       </div>
       <div cvlass="column is-1">
       </div>
     </div>
-      <transition-group appear name="items" tag="div" class="columns mt-5 is-hidden-mobile is-multiline">
-        <div v-for="memberData of memberCount" :key="memberData.id" class="column is-3-desktop is-4-tablet">
-          <Member :id="memberData.id" :name="memberData.name" :imagename="memberData.imagename" :position="memberData.position"></Member>
-        </div>
-      </transition-group>
-      <transition-group appear name="items" tag="div" class="columns mt-5 is-hidden-tablet is-mobile is-multiline">
-        <div v-for="memberData of memberCount" :key="memberData.id" class="column is-6-mobile">
-          <MemberSP :id="memberData.id" :name="memberData.name" :imagename="memberData.imagename" :position="memberData.position"></MemberSP>
-        </div>
-      </transition-group>
-    <!-- <div class="columns mt-5 is-mobile has-text-centered">
-      <div class="column is-12">
-        <button @click="goToReservation" class="reservation-button button mx-5">　<b>イムカフェご予約はこちら</b></button>
+    <transition-group appear name="items" tag="div" class="columns mt-5 is-hidden-mobile is-multiline">
+      <div v-for="memberData of memberCount" :key="memberData.id" class="column is-3-desktop is-4-tablet">
+        <Member :id="memberData.id" :name="memberData.name" :imagename="memberData.imagename" :position="memberData.position"></Member>
       </div>
-    </div> -->
+    </transition-group>
+    <transition-group appear name="items" tag="div" class="columns mx-3 mt-5 is-hidden-tablet is-mobile is-multiline">
+      <div v-for="memberData of memberCount" :key="memberData.id" class="column is-6-mobile">
+        <MemberSP :id="memberData.id" :name="memberData.name" :imagename="memberData.imagename" :position="memberData.position"></MemberSP>
+      </div>
+    </transition-group>
+    <!-- PC表示 -->
+    <div class="columns mt-5 has-text-centered is-hidden-mobile">
+      <div class="column is-12">
+        <b-button @click="goToReservation" class="reservation-button button mx-5" icon-right="chevron-right"><b>イムカフェご予約はこちら</b></b-button>
+      </div>
+    </div>
+    <!-- SP表示 -->
+    <div class="columns mt-5 has-text-centered is-hidden-tablet">
+      <div class="column is-1">
+        <b-button @click="goToReservation" class="reservation-button-sp button mx-5" icon-right="chevron-right"><b>イムカフェ<br />ご予約はこちら</b></b-button>
+      </div>
+    </div>
     <div class="brick">
       <div class="brick-area">
       </div>
@@ -69,7 +92,7 @@ export default {
     return {
       allmemberData: [],
       memberData: [],
-      tokyobuttonflag: true,
+      tokyobuttonflag: false,
       osakabuttonflag: false,
       kitchenbuttonflag: false,
     }
@@ -171,24 +194,57 @@ export default {
 .items-move {
   transition: transform .5s;
 }
-.menu-button {
+.menu-button-pc {
   width: 180px;
   height: 46px;
   font-size: 21.97px;
   color: #665039;
+  padding-left: .2em;
+  padding-right: .2em;
 }
-.menu-button-focus {
+.menu-button-focus-pc {
   width: 180px;
   height: 46px;
   background-color: #665039;
+  padding-left: .2em;
+  padding-right: .2em;
+}
+.menu-button {
+  width: 100%;
+  height: 40px;
+  font-size: 21.97px;
+  color: #665039;
+  padding-left: .2em;
+  padding-right: .2em;
+}
+.menu-button-focus {
+  width: 100%;
+  height: 40px;
+  background-color: #665039;
+  padding-left: .2em;
+  padding-right: .2em;
 }
 .reservation-button {
   background-color: #665039;
   color: white;
-  width: 80%;
-  height: 64px;
+  width: 50%;
+  max-width: 493px;
   font-size: 26px;
   font-family: "游ゴシック体";
+  line-height: 1.2em;
+  text-align: left;
+
+}
+.reservation-button-sp {
+  background-color: #665039;
+  color: white;
+  width: 80%;
+  max-width: 493px;
+  height: 110px;
+  font-size: 26px;
+  font-family: "游ゴシック体";
+  line-height: 1.2em;
+  text-align: left
 }
 .brick {
   margin: 0 calc(50% - 50vw);

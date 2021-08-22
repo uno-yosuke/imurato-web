@@ -16,7 +16,7 @@
               </div>
             </div>
           </div>
-          <img class="profile-handwritten" :src="imgHandWritten" alt="imurato_top">
+          <img class="profile-handwritten" :src="imgHandWritten" alt="imurato_top" v-animation:fadeIn="fadeInOption">
           <div class="profile-vertical-text">
             <p>{{ romajiName }}</p>
           </div>
@@ -27,7 +27,7 @@
       <div class="columns">
         <div class="column is-2"></div>
         <div class="imgwhole column is-4 mt-5">
-          <img class="imgwholebody" :src="imgWholebody" alt="">
+          <img class="imgwholebody" :src="imgWholebody" alt="" v-animation:fadeUp>
         </div>
         <div class="column is-5">
           <div class="text-area columns is-vcentered">
@@ -50,7 +50,7 @@
       </div>
       <div class="columns is-vcentered">
         <div class="column is-1"></div>
-        <div class="column is-5">
+        <div class="column is-5 private-margin">
           <div class="text-area columns is-vcentered">
             <div class="column is-12 p-5">
               <p class="private-main-text mb-5"><b>{{ privateMainText }}</b></p>
@@ -58,7 +58,7 @@
             </div>
           </div>
         </div>
-        <div class="column is-5 has-text-centered">
+        <div class="column is-5 has-text-centered private-margin">
           <img class="private-image" :src="imgPrivate" alt="" width=300px;>
         </div>
         <div class="column is-1"></div>
@@ -74,13 +74,13 @@
     <section class="section1-sp">
       <div class="columns is-mobile">
         <div class="column is-11">
-        <div class="profile-box-sp">
-          <ul>
-            <li><span class="is-size-6 has-text-white">{{ position }}</span></li>
-            <li><span class="is-size-2 has-text-white"><b>{{ name }}</b></span></li>
-            <li><span class="is-size6 has-text-white">得意分野：{{ specialty }}</span></li>
-          </ul>
-        </div>
+          <div class="profile-box-sp">
+            <ul>
+              <li><span class="is-size-6 has-text-white">{{ position }}</span></li>
+              <li><span class="is-size-2 has-text-white"><b>{{ name }}</b></span></li>
+              <li><span class="is-size6 has-text-white">得意分野：{{ specialty }}</span></li>
+            </ul>
+          </div>
         </div>
         <div class="column is-1">
           <div class="profile-vertical-text-sp">
@@ -104,8 +104,8 @@
           <p class="main-text">{{ mainText }}</p>
         </div>
       </div>
-      <div class="sub-text-area-sp mx-1">
-        <div class="column is-12">
+      <div class="sub-text-area-sp">
+        <div class="column is-12 p-0">
           <p class="sub-text">{{ subText }}</p>
         </div>
       </div>
@@ -130,9 +130,16 @@
         </div>
       </div>
     </section>
-    <div class="columns my-5 has-text-centered">
-      <div class="column">
-        <button @click="goToReservation" class="reservation-button button mx-5">　<b>イムカフェ<br>ご予約はこちら</b></button>
+    <!-- PC表示 -->
+    <div class="columns my-5 has-text-centered is-hidden-mobile">
+      <div class="column is-12">
+        <b-button @click="goToReservation" class="reservation-button button mx-5" icon-right="chevron-right"><b>イムカフェご予約はこちら</b></b-button>
+      </div>
+    </div>
+    <!-- SP表示 -->
+    <div class="columns my-5 has-text-centered is-hidden-tablet">
+      <div class="column is-1">
+        <b-button @click="goToReservation" class="reservation-button-sp button mx-5" icon-right="chevron-right"><b>イムカフェ<br />ご予約はこちら</b></b-button>
       </div>
     </div>
   </div>
@@ -144,6 +151,7 @@ import allmembers from '@/assets/json/member.json'
 import Private from '@/assets/private.svg'
 
 export default {
+  layout: `member`,
   data() {
     return {
       allmemberData: [],
@@ -158,6 +166,9 @@ export default {
       privateMainText: "",
       privateSubText: "",
       id: 0,
+      fadeInOption: {
+        delay:2
+      }
     }
   },
   components: {
@@ -222,7 +233,8 @@ export default {
   background-color: #BAA272;
   border-bottom: 30px solid white;
   margin-bottom: 20px;
-  height: 472px;
+  min-height: 472px;
+  height: auto;
   position: relative;
   z-index:10;
 }
@@ -286,18 +298,24 @@ export default {
 .reservation-button {
   background-color: #665039;
   color: white;
-  width: 490px;
-  height: 64px;
+  width: 50%;
+  max-width: 493px;
   font-size: 26px;
   font-family: "游ゴシック体";
+  line-height: 1.2em;
+  text-align: left;
+
 }
-.reservation-button {
+.reservation-button-sp {
   background-color: #665039;
   color: white;
   width: 80%;
-  height: 64px;
+  max-width: 493px;
+  height: 110px;
   font-size: 26px;
   font-family: "游ゴシック体";
+  line-height: 1.2em;
+  text-align: left
 }
 .imgwhole {
   position: relative;
@@ -366,7 +384,7 @@ export default {
 .profile-vertical-text-sp {
   position: absolute;
   top: 39px;
-  right: 15px;
+  right: 30px;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;  
   font-size: 1.5em;
@@ -389,10 +407,14 @@ export default {
   margin-top: 20px;
 }
 .text-area-sp {
+  padding-left: 30px;
+  padding-right: 30px;
   margin-top: 5px;
 }
 .sub-text-area-sp {
   position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
   padding-bottom: 130px;
   background-color: white;
   z-index: 10;
@@ -420,5 +442,8 @@ export default {
 .private-sub-text-sp {
   letter-spacing: 5px;
   color:#FAFAFA;
+}
+.private-margin {
+  margin-top: 60px;
 }
 </style>
