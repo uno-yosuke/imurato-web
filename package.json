@@ -14,6 +14,7 @@
     "gsap": "^3.7.1",
     "nuxt": "^2.15.7",
     "nuxt-buefy": "^0.4.8",
+    "nuxt-webfontloader": "^1.1.0",
     "vue-scrollmagic": "^1.2.0"
   },
   "devDependencies": {

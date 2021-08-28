@@ -3,14 +3,14 @@
     <!-- PC表示 -->
     <nav class="navbar header has-shadow is-hidden-mobile" role="navigation" aria-label="main navigation">
       <div class="navbar-brand-center">
-        <a href="/"><ImuratoTop /></a>
+        <NuxtLink to="/"><ImuratoTop /></NuxtLink>
         <p class="navbar-text mt-4">コーヒーを飲みながらのマーケティング相談所、いつでも開催中。</p>
       </div>
     </nav>
     <!-- SP表示 -->
     <nav class="navbar-sp header has-shadow is-hidden-tablet" role="navigation" aria-label="main navigation">
       <div class="navbar-brand-center-sp is-hidden-tablet">
-        <a href="/"><ImuratoTop width="100" height="60" /></a>
+        <NuxtLink to="/"><ImuratoTop width="100" height="60" /></NuxtLink>
           <p class="navbar-text-sp">コーヒーを飲みながらのマーケティング相談所、いつでも開催中。</p>
       </div>
     </nav>

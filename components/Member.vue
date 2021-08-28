@@ -1,6 +1,7 @@
 <template>
   <div v-on:mouseover="mouseOverAction" v-on:mouseleave="mouseLeaveAction" class="member-card-layout">
-    <nuxt-link :to="{ path: '/member/' + id }">
+    <!-- <nuxt-link :to="{ path: '/member/' + id }"> -->
+    <nuxt-link :to="{ path: pathname + '.html' }">
         <div :style="{ backgroundImage: 'url(' + imgSrc + ')' }" class="svg">
           <div v-show="hoverFlag == false">
             <CloseWindow />
@@ -45,6 +46,9 @@ export default {
       required: true
     },
     imagename: {
+      type: String,
+    },
+    pathname: {
       type: String,
     },
     position: {

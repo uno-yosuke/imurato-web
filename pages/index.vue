@@ -48,12 +48,12 @@
     </div>
     <transition-group appear name="items" tag="div" class="columns mt-5 is-hidden-mobile is-multiline">
       <div v-for="memberData of memberCount" :key="memberData.id" class="column is-3-desktop is-4-tablet">
-        <Member :id="memberData.id" :name="memberData.name" :imagename="memberData.imagename" :position="memberData.position"></Member>
+        <Member :id="memberData.id" :name="memberData.name" :imagename="memberData.imagename"  :pathname="memberData.pathName" :position="memberData.position"></Member>
       </div>
     </transition-group>
     <transition-group appear name="items" tag="div" class="columns mx-3 mt-5 is-hidden-tablet is-mobile is-multiline">
       <div v-for="memberData of memberCount" :key="memberData.id" class="column is-6-mobile">
-        <MemberSP :id="memberData.id" :name="memberData.name" :imagename="memberData.imagename" :position="memberData.position"></MemberSP>
+        <MemberSP :id="memberData.id" :name="memberData.name" :imagename="memberData.imagename" :pathname="memberData.pathName" :position="memberData.position"></MemberSP>
       </div>
     </transition-group>
     <!-- PC表示 -->
@@ -76,9 +76,9 @@
 </template>
 
 <script>
-import Member from '~/components/Member'
-import MemberSP from '~/components/MemberSP'
-import allmembers from '@/assets/json/member.json'
+import Member from '../components/Member'
+import MemberSP from '../components/MemberSP'
+import allmembers from '../assets/json/member.json'
 import MemberHeader from '../assets/memberHeader.svg'
 import Tokyo from '../assets/tokyo.svg'
 import Osaka from '../assets/osaka.svg'
