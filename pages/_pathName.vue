@@ -288,7 +288,8 @@ export default {
   font-size: 28px;
   font-weight: bold;
   color: #BAA272;
-  font-family: "游ゴシック体";
+  font-family: '游ゴシック体', sans-serif;
+  letter-spacing: 5px;
 }
 .sub-text {
   letter-spacing: 5px;
@@ -297,7 +298,7 @@ export default {
 .private-main-text {
   font-size: 26px;
   color:#FAFAFA;
-  font-family: "游ゴシック体";
+  font-family: '游ゴシック体', sans-serif;
 }
 .private-sub-text {
   color:#FAFAFA;
@@ -313,7 +314,7 @@ export default {
   width: 50%;
   max-width: 493px;
   font-size: 26px;
-  font-family: "游ゴシック体";
+  font-family: '游ゴシック体', sans-serif;
   line-height: 1.2em;
   text-align: left;
 
@@ -325,9 +326,10 @@ export default {
   max-width: 493px;
   height: 110px;
   font-size: 26px;
-  font-family: "游ゴシック体";
+  font-family: '游ゴシック体', sans-serif;
   line-height: 1.2em;
-  text-align: left
+  text-align: left;
+  letter-spacing: 5px;
 }
 .imgwhole {
   position: relative;
@@ -453,7 +455,7 @@ export default {
   font-size: 28px;
   color:#FAFAFA;
   letter-spacing: 5px;
-  font-family: "游ゴシック体";
+  font-family: '游ゴシック体', sans-serif;
 }
 .private-sub-text-sp {
   letter-spacing: 5px;

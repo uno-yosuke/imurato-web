@@ -242,9 +242,10 @@ export default {
   max-width: 493px;
   height: 110px;
   font-size: 26px;
-  font-family: "游ゴシック体";
+  font-family: '游ゴシック体', sans-serif;
   line-height: 1.2em;
-  text-align: left
+  text-align: left;
+  letter-spacing: 5px;
 }
 .brick {
   margin: 0 calc(50% - 50vw);
